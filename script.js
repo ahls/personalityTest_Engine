@@ -408,7 +408,7 @@ const UI = {
 const NUM_QUESTIONS_ASKED = 5;
 const BUTTON_COLORS_STROKES = ["#F5B700","#46C2CB","#E4572E","#3E9E8E","#4C7FC9"];
 
-const DEBUG = true;
+const DEBUG = false;
 let debugPanelEl = null;
 function renderDebugPanel() {
   if (!DEBUG) return;
