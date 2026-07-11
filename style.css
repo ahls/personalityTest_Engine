@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Barlow:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap');
+
+* { box-sizing: border-box; }
+body { margin: 0; background: #1b1e23; font-family: 'Barlow', sans-serif; }
+::selection { background: #F5B70055; }
+a { color: #46C2CB; }
+a:hover { color: #7DD8DE; }
+
+@keyframes pop-in { 0% { transform: scale(0.9); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+
+.page {
+  min-height: 100vh; width: 100%; display: flex; align-items: center; justify-content: center;
+  padding: 32px 16px; background: radial-gradient(circle at 22% 12%, #262b32 0%, #1b1e23 55%, #15181c 100%);
+  position: relative; overflow: hidden;
+}
+.wrap { width: 100%; max-width: 460px; position: relative; }
+
+.lang-row { display: flex; justify-content: center; margin-bottom: 14px; }
+.lang-btn {
+  font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #9aa3ac;
+  background: #23272e; border: 1.5px solid #4a5058; border-radius: 6px; padding: 7px 16px; cursor: pointer;
+}
+.lang-btn:hover { border-color: #F5B700; color: #F5B700; }
+
+.card {
+  background: #2b3038; border: 2px solid #4a5058; border-radius: 14px;
+  box-shadow: 6px 6px 0 rgba(0,0,0,0.35); padding: 34px 26px 30px; text-align: center;
+  animation: pop-in 0.35s ease; position: relative; z-index: 2; margin-top: 14px;
+}
+.badge {
+  display: inline-block; background: rgba(245,183,0,0.14); border: 1.5px solid #F5B700; border-radius: 5px;
+  padding: 5px 14px; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700;
+  letter-spacing: 0.08em; color: #F5B700; margin-bottom: 16px;
+}
+.intro-title {
+  font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 32px; line-height: 1.25;
+  letter-spacing: 0.01em; text-transform: uppercase; color: #EDEFF2; margin: 0 0 8px;
+}
+.intro-sub { font-size: 16px; color: #9aa3ac; margin: 0 0 22px; line-height: 1.5; }
+.start-btn {
+  font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 0.03em;
+  text-transform: uppercase; color: #1b1e23; background: #F5B700; border: 2px solid #C99000; border-radius: 8px;
+  padding: 14px 36px; cursor: pointer; box-shadow: 0 5px 0 #C99000;
+}
+.start-btn:hover { transform: translateY(-2px); box-shadow: 0 7px 0 #C99000; }
+.start-btn:active { transform: translateY(3px); box-shadow: 0 2px 0 #C99000; }
+.footnote { font-family: 'Space Mono', monospace; font-size: 12px; color: #6b7480; margin: 18px 0 0; }
+
+.progress-row { margin-bottom: 16px; display: flex; align-items: center; justify-content: center; gap: 6px; }
+.dot { height: 6px; border-radius: 2px; border: 1px solid #4a5058; transition: width 0.25s ease, background 0.25s ease; }
+
+.q-topline { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; padding: 0 2px; }
+.q-counter { font-family: 'Space Mono', monospace; font-size: 13px; color: #6b7480; }
+.diff-btn {
+  font-family: 'Space Mono', monospace; font-size: 12px; background: #23272e; border: 1.5px solid #4a5058;
+  border-radius: 6px; padding: 6px 14px; color: #9aa3ac; cursor: pointer;
+}
+.diff-btn:disabled { color: #4a5058; cursor: not-allowed; opacity: 0.5; }
+
+.q-card-wrap { transition: opacity 0.3s ease, transform 0.3s ease; opacity: 1; transform: translateX(0); }
+.q-card-wrap.entering { transition: none; opacity: 0; transform: translateX(24px); }
+.q-card-wrap.leaving { opacity: 0; transform: translateX(-24px); }
+
+.q-card { background: #2b3038; border: 2px solid #4a5058; border-radius: 14px; box-shadow: 5px 5px 0 rgba(0,0,0,0.35); padding: 30px 24px; }
+.q-text { font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: 22px; line-height: 1.45; color: #EDEFF2; margin: 0 0 22px; text-align: center; }
+.responses { display: flex; flex-direction: column; gap: 10px; }
+.resp-btn {
+  text-align: left; font-family: 'Barlow', sans-serif; font-size: 15px; color: #EDEFF2; background: #23272e;
+  border: 1.5px solid #4a5058; border-left: 4px solid #F5B700; border-radius: 6px; padding: 13px 16px; cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+.resp-btn:hover { transform: translateX(4px); }
+
+.result-badge { display: inline-block; border-radius: 5px; padding: 5px 14px; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; margin-bottom: 16px; }
+.result-name { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 30px; text-transform: uppercase; letter-spacing: 0.01em; color: #EDEFF2; margin: 0 0 4px; }
+.result-sub { font-family: 'Space Mono', monospace; font-size: 13px; color: #6b7480; margin-bottom: 18px; }
+.portrait-box { width: 170px; height: 170px; margin: 0 auto 16px; border-radius: 16px; overflow: hidden; background: #23272e; border: 2px dashed; }
+.portrait-img { width: 100%; height: 100%; background-size: contain; background-position: center; background-repeat: no-repeat; }
+.result-quote { font-family: 'Barlow', sans-serif; font-style: italic; font-size: 16px; color: #EDEFF2; background: #23272e; border-left: 3px solid; border-radius: 4px; padding: 12px 16px; margin: 0 0 16px; line-height: 1.5; text-align: left; }
+.traits-row { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 18px; }
+.trait-chip { font-family: 'Space Mono', monospace; font-size: 12px; background: rgba(255,255,255,0.04); border-radius: 5px; padding: 4px 11px; }
+.result-about { font-family: 'Barlow', sans-serif; font-size: 16px; color: #c3c9cf; line-height: 1.6; text-align: left; margin: 0 0 18px; }
+.stats-row { display: flex; gap: 10px; margin-bottom: 20px; }
+.stat-box { flex: 1; background: #23272e; border: 1.5px solid #4a5058; border-radius: 10px; padding: 10px 8px; }
+.stat-label { font-family: 'Space Mono', monospace; font-size: 11px; color: #6b7480; letter-spacing: 0.04em; }
+.stat-value { font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: 17px; }
+.restart-btn {
+  font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: 0.03em; text-transform: uppercase;
+  color: #1b1e23; background: #46C2CB; border: 2px solid #2C8E95; border-radius: 8px; padding: 12px 30px; cursor: pointer;
+  box-shadow: 0 5px 0 #2C8E95;
+}
+.restart-btn:hover { transform: translateY(-2px); box-shadow: 0 7px 0 #2C8E95; }
+.restart-btn:active { transform: translateY(3px); box-shadow: 0 2px 0 #2C8E95; }
+
+.hidden { display: none !important; }

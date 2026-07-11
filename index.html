@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Which Engine Type Am I?</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <div class="wrap">
+
+      <div class="lang-row">
+        <button id="lang-btn" class="lang-btn">EN</button>
+      </div>
+
+      <section id="intro-screen" class="card">
+        <div id="badge" class="badge"></div>
+        <h1 id="intro-title" class="intro-title"></h1>
+        <p id="intro-sub" class="intro-sub"></p>
+        <button id="start-btn" class="start-btn"></button>
+        <p id="footnote" class="footnote"></p>
+      </section>
+
+      <section id="question-screen" class="hidden">
+        <div id="progress-row" class="progress-row"></div>
+        <div class="q-topline">
+          <div id="q-counter" class="q-counter"></div>
+          <button id="diff-btn" class="diff-btn"></button>
+        </div>
+        <div id="q-card-wrap" class="q-card-wrap">
+          <div class="q-card">
+            <h2 id="q-text" class="q-text"></h2>
+            <div id="responses" class="responses"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="result-screen" class="card hidden">
+        <div id="result-badge" class="result-badge"></div>
+        <h1 id="result-name" class="result-name"></h1>
+        <div id="result-sub" class="result-sub"></div>
+        <div id="portrait-box" class="portrait-box">
+          <div id="portrait-img" class="portrait-img"></div>
+        </div>
+        <p id="result-quote" class="result-quote"></p>
+        <div id="traits-row" class="traits-row"></div>
+        <p id="result-about" class="result-about"></p>
+        <div class="stats-row">
+          <div class="stat-box">
+            <div id="match-label" class="stat-label"></div>
+            <div id="match-value" class="stat-value" style="color:#46C2CB"></div>
+          </div>
+          <div class="stat-box">
+            <div id="hard-label" class="stat-label"></div>
+            <div id="hard-value" class="stat-value" style="color:#E4572E"></div>
+          </div>
+        </div>
+        <button id="restart-btn" class="restart-btn"></button>
+      </section>
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
